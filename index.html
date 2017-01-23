@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add a task:</h2>
+          <form id="taskList">
+            <div class="form-group">
+              <label for="new-task1">Task</label>
+              <input type="text" class="form-control" id="new-task1">
+            </div>
+            <div class="form-group">
+              <label for="new-task2">Another Task</label>
+              <input type="text" class="form-control" id="new-task2">
+            </div>
+            <div class="form-group">
+              <label for="new-task3">Another Task</label>
+              <input type="text" class="form-control" id="new-task3">
+            </div>
+            <div class="form-group">
+              <label for="new-task4">Another Task</label>
+              <input type="text" class="form-control" id="new-task4">
+            </div>
+            <div class="form-group">
+              <label for="new-task5">Another Task</label>
+              <input type="text" class="form-control" id="new-task5">
+            </div>
+            <button type="submit" class="btn">Add</button>
+          </form>
+
+          <h2>Your To-Do List:</h2>
+          <ul id="toDoList">
+
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="show-list">
+            <h2></h2>
+
+            <p><span class="first-task"></span></p>
+            <p><span class="second-task"></span></p>
+            <p><span class="third-task"></span></p>
+            <p><span class="fourth-task"></span></p>
+            <p><span class="fifth-task"></span></p>
+
+          </div>
+        </div>
+        </div>
+      </div>
+  </body>
+</html>
