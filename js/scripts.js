@@ -16,44 +16,44 @@ $(document).ready(function() {
   $("form#taskList").submit(function(event){
     event.preventDefault();
 
-    var inputtedFirstTask = $("input#new-task1").val();
-    var inputtedSecondTask = $("input#new-task2").val();
-    var inputtedThirdTask = $("input#new-task3").val();
-    var inputtedFourthTask = $("input#new-task4").val();
-    var inputtedFifthTask = $("input#new-task5").val();
+    var allTasks= ["new-task1", "new-task2", "new-task3", "new-task4", "new-task5"];
 
-    var newList = new List(inputtedFirstTask, inputtedSecondTask, inputtedThirdTask, inputtedFourthTask, inputtedFifthTask);
+  // $("#list").append(List);
 
-    // $("ul#toDoList").append("<li><span class='show'>" + newList.fullList() + "</span></li>");
+    allTasks.forEach(function(task) {
+      var userInput = $("input#" + task).val();
+      $("#toDoList").append("<li class='striker'>" + userInput + "</li>");
+    });
 
-    // $(".show").last().click(function() {
-    $(".first-task").text(newList.firstTask);
-    $(".second-task").text(newList.secondTask);
-    $(".third-task").text(newList.thirdTask);
-    $(".fourth-task").text(newList.fourthTask);
-    $(".fifth-task").text(newList.fifthTask);
+    allTasks.forEach(function(task) {
+      var userInput = $("input#" + task).val();
+      $(".striker").click(function() {
+      $(this).wrap("<strike>");
+    });
+  });
 
-    $(".first-task").click(function() {
-      $(".first-task").hide();
-    });
-    $(".second-task").click(function() {
-      $(".second-task").hide();
-    });
-    $(".third-task").click(function() {
-      $(".third-task").hide();
-    });
-    $(".fourth-task").click(function() {
-      $(".fourth-task").hide();
-    });
-    $(".fifth-task").click(function() {
-      $(".fifth-task").hide();
-    });
+
+  $("input#new-task1").val("");
+  $("input#new-task2").val("");
+  $("input#new-task3").val("");
+  $("input#new-task4").val("");
+  $("input#new-task5").val("");
+    //
+    // $(".new-task1").click(function() {
+    //   $(".new-task1").wrap("<strike>");
+    // });
+    // $(".second-task").click(function() {
+    //   $(".second-task").hide();
+    // });
+    // $(".third-task").click(function() {
+    //   $(".third-task").hide();
+    // });
+    // $(".fourth-task").click(function() {
+    //   $(".fourth-task").hide();
+    // });
+    // $(".fifth-task").click(function() {
+    //   $(".fifth-task").hide();
     // });
 
-    $("input#new-task1").val("");
-    $("input#new-task2").val("");
-    $("input#new-task3").val("");
-    $("input#new-task4").val("");
-    $("input#new-task5").val("");
   });
 });
