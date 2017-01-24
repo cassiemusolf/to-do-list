@@ -28,7 +28,7 @@ $(document).ready(function() {
     allTasks.forEach(function(task) {
       var userInput = $("input#" + task).val();
       $(".striker").click(function() {
-      $(this).wrap("<strike>");
+      $(this).toggleClass("strike");
     });
   });
 

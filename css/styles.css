@@ -1,10 +1,27 @@
 body {
   background-color: #c9d4e5;
-  font-family: monospace;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
 }
 
 li {
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
   list-style: none;
+  margin-top: 20px;
+}
+
+.jumbotron {
+  background-image: url("http://www.hdbloggers.net/wp-content/uploads/2016/09/Background-Image-4.jpg");
+  color: white;
+  font-size: 60px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.strike {
+  text-decoration:line-through;
 }
